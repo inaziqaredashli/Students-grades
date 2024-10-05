@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamrin-2</title>
+</head>
+
+<body>
+  <h1>hello</h1>
+  <script>
+   const students = ["Usher", "Roham"];
+      const studentsCount = students.length;
+      console.log(studentsCount);
+      const lessons = ["farsi", "riazi", "shimi"];
+      const grades = [
+        {
+          farsi: 10,
+          riazi: 5,
+          shimi: 20,
+        },
+        {
+          farsi: 20,
+          riazi: 18,
+          shimi: 15,
+        },
+      ];
+      const studensMoadel = [];
+      grades.forEach((val, index) => {
+        let total = 0;
+        let n = 0;
+        for (grade in val) {
+          total += val[grade];
+          n++;
+        }
+        const moadel = total / n;
+        studensMoadel.push(moadel);
+        console.log(`${students[index]}'s Moadel: ${moadel}`);
+      });
+
+      lessons.forEach((val, index) => {
+        let total = 0;
+        let n = 0;
+        lessonName = val;
+        grades.forEach((val, index) => {
+          total += val[lessonName];
+          n++;
+        });
+        console.log(`${lessonName} miangin is: ${total / n}`);
+      });
+  </script>
+</body>
+
+</html>
